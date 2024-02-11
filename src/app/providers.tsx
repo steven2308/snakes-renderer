@@ -13,6 +13,7 @@ const customUtilityContracts = {} satisfies RMRKUtilityContracts;
 
 const rmrkConfig = {
   utilityContracts: customUtilityContracts,
+  ipfsGateway: 'https://ipfs.filebase.io'
 };
 
 const queryClient = new QueryClient();
