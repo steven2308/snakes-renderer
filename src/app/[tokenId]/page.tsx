@@ -1,22 +1,20 @@
 'use client';
 
 import { NFTRenderer } from '@rmrk-team/nft-renderer';
-import { Address } from 'viem';
 
 export default function TokenDisplay({
   params,
 }: {
-  params: { chainId: string; contractAddress: Address; tokenId: string };
+  params: { tokenId: string };
 }) {
-  const { chainId: chainIdString, contractAddress, tokenId } = params;
-  const chainId = parseInt(chainIdString);
+  const { tokenId } = params;
 
   return (
     <div className="token-container">
       <div className="token-container-inner">
         <NFTRenderer
-          chainId={chainId}
-          contractAddress={contractAddress}
+          chainId={1284}
+          contractAddress={'0x8f64ce931f0d36430b971548b81264eef3bd9b97'}
           tokenId={BigInt(tokenId)}
         />
       </div>
